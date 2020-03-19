@@ -18,19 +18,34 @@ a:focus {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 .page__header {
   padding-top: 2em;
   padding-bottom: 2em;
+  min-height: 470px;
+  background: url("../img/page-header-bg.jpg");
+  background-size: cover;
+  background-position: 0 50%;
 }
 
 .page__header-logo {
   text-align: center;
 }
 
+.page__content {
+  margin-top: -110px;
+}
+
 .page__content-item {
-  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2em;
 }
 
@@ -41,9 +56,9 @@ a:focus {
 
 .header {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
   font-family: 'Neucha', cursive;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.1;
 }
 
@@ -53,7 +68,27 @@ a:focus {
 }
 
 .info__img-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+  padding-bottom: 20px;
   text-align: center;
+}
+
+.info__img-wrap:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 60px;
+  height: 5px;
+  left: 0;
+  right: 0;
+  background: transparent;
+  box-shadow: 0 40px 20px #000;
+}
+
+.info__text-wrap {
+  padding-left: 16px;
 }
 
 .store-btns__item {
@@ -61,23 +96,45 @@ a:focus {
 }
 
 .page__footer {
+  position: relative;
   text-align: center;
+}
+
+.conf-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.7em;
+}
+
+.fb-like {
+  margin-top: 2em;
 }
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
 
-  .info__text-wrap {
-    max-width: 380px;
+  .info__img-wrap {
+    max-width: 260px;
   }
 
 }
 
+@media (min-width: 768px) {}
+
 @media (min-width: 992px) {
 
+  .page__header {
+    min-height: 60vw;
+  }
+
+  .page__content {
+    margin-top: -140px;
+  }
+
   .header {
-    font-size: 48px;
+    font-size: 36px;
   }
 
 }
