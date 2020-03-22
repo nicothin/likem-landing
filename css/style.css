@@ -28,18 +28,14 @@ img {
 .page__header {
   padding-top: 2em;
   padding-bottom: 2em;
-  min-height: 470px;
-  background: url("../img/page-header-bg.jpg");
+  min-height: 430px;
+  background: url("../img/page-header-bg-sm.jpg");
   background-size: cover;
   background-position: 0 50%;
 }
 
 .page__header-logo {
   text-align: center;
-}
-
-.page__header-logo img {
-  max-width: 320px;
 }
 
 .page__content {
@@ -111,8 +107,8 @@ img {
   font-size: 0.7em;
 }
 
-.fb-like {
-  margin-top: 2em;
+.store-btns {
+  margin-bottom: 2em;
 }
 
 
@@ -130,7 +126,7 @@ img {
 @media (min-width: 992px) {
 
   .page__header {
-    min-height: 60vw;
+    min-height: 40vw;
   }
 
   .page__content {
