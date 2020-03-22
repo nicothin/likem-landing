@@ -38,6 +38,10 @@ img {
   text-align: center;
 }
 
+.page__header-logo img {
+  max-width: 320px;
+}
+
 .page__content {
   margin-top: -110px;
 }
