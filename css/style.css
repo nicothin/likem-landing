@@ -55,6 +55,26 @@ img {
   padding-bottom: 2em;
 }
 
+.lang {
+  position: absolute;
+  top: 2em;
+  right: 0.5em;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 700;
+}
+
+.lang a {
+  padding: 6px;
+  text-decoration: none;
+}
+
+.lang a:hover {
+  text-decoration: underline;
+}
+
 .header {
   margin-top: 0;
   margin-bottom: 0.6em;
