@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="ru" class="page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Likem</title>
-  <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap&subset=cyrillic" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap&subset=cyrillic" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&subset=cyrillic" rel="stylesheet"> -->
+
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -17,83 +19,137 @@
 </head>
 <body>
 
-  <header class="page__header">
+  <header class="page__header  pb-4">
     <div class="container">
-      <div class="row  align-items-center  justify-content-center">
-        <div class="col-7  col-sm-6  col-md-4  col-lg-3  mb-3  mb-sm-0  page__header-logo">
-          <img src="img/logo-likem.png" alt="LIKEM!">
+      <div class="page-header">
+        <img src="img/logo2.png" alt="LIKEIM" class="page-header__logo">
+        <ul class="page-header__nav">
+          <li>
+            <a href="" class="page-header__nav-link">О проекте</a>
+          </li>
+          <li>
+            <a href="" class="page-header__nav-link  page-header__nav-link--alter">Функционал</a>
+          </li>
+          <li>
+            <a href="" class="page-header__nav-link">Кейсы</a>
+          </li>
+          <li>
+            <a href="" class="page-header__nav-link  page-header__nav-link--alter">Стоимость</a>
+          </li>
+          <li>
+            <a href="" class="page-header__nav-link">Скачать</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-header__picts  row">
+        <h1 class="sr-only">LikeIm</h1>
+        <div class="col-12  col-lg-6  mb-4">
+          <img src="img/text1.png" alt="У вас яркие фанаты" class="mb-2">
+          <img src="img/text2.png" alt="За каждым своя история">
+        </div>
+        <div class="col-12  col-lg-6">
+          <img src="img/superboy.png" alt="Superboy">
         </div>
       </div>
     </div>
-    <ul class="lang">
+    <!-- <ul class="lang">
       <li>
         <a href="">ru</a>
       </li>
       <li>
         <a href="">en</a>
       </li>
-    </ul>
+    </ul> -->
   </header>
 
-  <div class="page__content  container">
+  <section id="about" class="about  pt-4  pb-5">
+    <div class="container">
+      <h2 class="title  sr-only">О проекте</h2>
+      <div class="row  justify-content-center">
+        <div class="col  col-sm-8  col-lg-6">
+          <img src="img/herowhatchingtv.png" alt="О проекте">
+        </div>
+        <div class="col-12  col-lg-6">
+          <p class="subtitle">Клиенты обычно <span class="nowrap">(( :</span></p>
+          <ul class="list">
+            <li>Редко оставляют отзывы</li>
+            <li>Чаще делятся негативными</li>
+            <li>Не знают, что писать</li>
+            <li>Не упоминают бренд</li>
+            <li>Пишут только, когда их просишь</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main class="info  row  justify-content-center">
+  <section id="func" class="func  pt-1 pb-5">
+    <div class="func__container  container-fluid  text-center  pl-4  pr-4">
+      <h2 class="title">Функционал</h2>
+      <div class="row">
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Привилегии для фанатов</h3>
+            <ul class="unlist">
+              <li>Создание собственных и использование партнерских</li>
+              <li>Кросс-отраслевые привелегии</li>
+              <li>Социально-значимые привилегии</li>
+              <li>Номинация в лайках и валюте</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Каталог фан-объектов</h3>
+            <ul class="unlist">
+              <li>Создание собственных фан-объектов</li>
+              <li>Рекомендованные для фанов</li>
+              <li>Места, события, люди, бренды</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Фанатские списки</h3>
+            <ul class="unlist">
+              <li>Сортировка по лояльности</li>
+              <li>Возможность блокировки фаната</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Личный кабинет</h3>
+            <ul class="unlist">
+              <li>Подключение соц. сетей</li>
+              <li>История покупок и продаж привилегий</li>
+              <li>Кошелек социальной валюты</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Делись впечатлением</h3>
+            <ul class="unlist">
+              <li>Не требуется запоминать теги фан-объекта</li>
+              <li>Посты в Фейсбук, Инстаграм и ВК</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12  col-lg-6  col-xl-4  pb-4">
+          <div class="func__block">
+            <h3 class="subtitle">Реферальная программа</h3>
+            <ul class="unlist">
+              <li>Бонусы при подключении фан-объекта «у дома»</li>
+              <li>Бонусы при подключении друзей-фанатов</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="page__content-item  col-12  col-md-6  col-xl-4">
-        <div class="info__img-wrap">
-        <img src="img/1.png" alt="">
-        </div>
-        <div class="info__text-wrap">
-        <h1 class="header">Доступные вам привилегии</h1>
-        <p>Если Вы&nbsp;увлеченный человек, тогда здесь будет список ваших Привилегий, Мест и&nbsp;Мероприятий. Совсем рядом и&nbsp;на&nbsp;особых для вас условиях.</p>
-        </div>
-        </section>
-
-        <section class="page__content-item  col-12  col-md-6  col-xl-4">
-        <div class="info__img-wrap">
-        <img src="img/2.png" alt="">
-        </div>
-        <div class="info__text-wrap">
-        <h1 class="header">Кошелек впечатлений и&nbsp;история транзакций</h1>
-        <p>Делиться впечатлениями в&nbsp;likem выгодно всем. А&nbsp;источником впечатлений может стать каждый. Производите впечатления, делитесь ими, зарабатывайте на&nbsp;этом. Они того стоят.</p>
-        </div>
-        </section>
-
-        <section class="page__content-item  col-12  col-md-6  col-xl-4">
-        <div class="info__img-wrap">
-        <img src="img/3.png" alt="">
-        </div>
-        <div class="info__text-wrap">
-        <h1 class="header">Ценность слов</h1>
-        <p>Друзья понимают нас с&nbsp;полуслова. А&nbsp;если слов нет, чтобы выразить чувства, тогда используйте теги. С&nbsp;ними еще ярче!</p>
-        </div>
-        </section>
-
-        <section class="page__content-item  col-12  col-md-6  col-xl-4">
-        <div class="info__img-wrap">
-        <img src="img/4.png" alt="">
-        </div>
-        <div class="info__text-wrap">
-        <h1 class="header">Фанаты для Фан объекта</h1>
-        <p>Фанаты всегда вместе! Фан лист на&nbsp;основе постов пользователя в&nbsp;соцсетях, позволит бизнесу видеть своих лояльных и&nbsp;активных клиентов, совместно с&nbsp;партнерами предложить им&nbsp;уникальные Привилегии.</p>
-        </div>
-        </section>
-
-        <section class="page__content-item  col-12  col-md-6  col-xl-4">
-        <div class="info__img-wrap">
-        <img src="img/5.png" alt="">
-        </div>
-        <div class="info__text-wrap">
-        <h1 class="header">Делитесь впечатлениями</h1>
-        <p>Делитесь впечатлениями из&nbsp;Likem в&nbsp;ваших соцсетях. Здесь быстрее, проще и&nbsp;выгоднее.</p>
-        </div>
-        </section>
-
-    </main>
-
-  </div>
-
-  <footer class="page__footer">
+  <!-- <footer class="page__footer">
     <div class="container">
       <a href="/" class="page__footer-logo"></a>
       <p class="page__footer-copyright">Скачайте приложение Likem и узнайте, что это значит для Вас уже сейчас!</p>
@@ -108,7 +164,7 @@
       <a href="https://www.facebook.com/likemApp/"><img src="img/btn-facebook.png" alt=""></a>
     </div>
     <a href="" class="conf-link">Соглашение</a>
-  </footer>
+  </footer> -->
 
 </body>
 </html>
