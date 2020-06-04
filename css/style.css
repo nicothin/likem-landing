@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Привет, большие «уголки»! */
 }
 
 body {
@@ -28,14 +29,22 @@ img {
 
 .title {
   position: relative;
+  z-index: 100;
+  position: absolute;
+  top: -1.0em;
+  left: 50%;
   display: inline-block;
-  margin: -1.5em 0 1em;
+  margin: 0;
   padding: 0.4em 0.8em;
   border-radius: 20px;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.1;
   font-weight: 700;
   background: #E64063;
+  white-space: nowrap;
+  /* transform: translateY(-1em); */
+  transform: translateX(-50%);
+  box-shadow: 0 0.15em 0.3em rgba(0,0,0,0.3);
 }
 
 .title--orange {
@@ -83,9 +92,43 @@ img {
 
 
 .page-header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 16px 0;
+}
+
+.page__header {
+  position: relative;
+}
+
+.page__header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #E64164;
+}
+
+.page__header:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 300px 112px 0;
+  border-color: transparent #E64164 transparent transparent;
+}
+
+.page__header .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-header__logo {
@@ -115,15 +158,109 @@ img {
 }
 
 .about {
+  position: relative;
   background: #59256D;
 }
 
+.about:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #1b916e;
+}
+
+.about:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 400px 200px 0;
+  border-color: transparent #E64164 transparent transparent;
+}
+
+.about .container {
+  position: relative;
+  z-index: 50;
+}
+
+.about__right-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 220px;
+  height: 180px;
+  background: #E64164;
+}
+
 .func {
+  position: relative;
   background: #FFD822;
 }
 
+.func__inner {
+  position: relative;
+  padding-top: 4em;
+  overflow: hidden;
+}
+
 .func__container {
+  position: relative;
+  z-index: 50;
   max-width: 1600px;
+}
+
+.func:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 160px 400px;
+  border-color: transparent transparent #38AD67 transparent;
+}
+
+.func:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 463px 190px 0;
+  border-color: transparent #59256D transparent transparent;
+}
+
+.func__left-rect {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: 515px;
+  background: #38AD67;
+}
+
+.func__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-left.png');
+  background-size: cover;
 }
 
 .func__block {
@@ -132,26 +269,155 @@ img {
   border-radius: 20px;
   background: #58216B url(../img/bg-block.png) center bottom no-repeat;
   background-size: 100%;
+  box-shadow: 0 0.15em 0.3em rgba(0,0,0,0.3);
 }
 
 .object {
+  position: relative;
   background: #38AD67;
 }
 
+.object:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 180px 400px 0 0;
+  border-color: #56256F transparent transparent transparent;
+}
+
+.object:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #F56E00;
+}
+
+.object__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-left.png');
+  background-size: cover;
+}
+
+.object__left-rect {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+  height: 260px;
+  background: #E64063;
+}
+
+.object__inner {
+  padding-top: 4em;
+}
+
 .object__container {
+  position: relative;
+  z-index: 50;
   max-width: 800px;
 }
 
 .fan {
+  position: relative;
   background: #56256F;
+}
+
+.fan__inner {
+  position: relative;
+  z-index: 50;
+  padding-top: 4em;
+}
+
+.fan__left-rect {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  background: #E64063;
+}
+
+.fan__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-right.png');
+  background-size: cover;
 }
 
 .fan__container {
   max-width: 800px;
 }
 
+.fan:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #64C0A6;
+}
+
 .objects {
+  position: relative;
   background: #E64164;
+}
+
+.objects__inner {
+  padding-top: 4em;
+  position: relative;
+  z-index: 5;
+}
+
+.objects:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 463px 190px 0;
+  border-color: transparent #38AD68 transparent transparent;
+}
+
+.objects__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-left.png');
+  background-size: cover;
+}
+
+.objects__left-rect {
+  position: absolute;
+  left: -200px;
+  bottom: -100px;
+  width: 450px;
+  height: 450px;
+  background: #38AD68;
+  transform: rotate(30deg);
 }
 
 .objects__container {
@@ -188,7 +454,49 @@ img {
 }
 
 .action {
+  position: relative;
   background: #FAD329;
+}
+
+.action__inner {
+  padding-top: 4em;
+  position: relative;
+  z-index: 50;
+}
+
+.action:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #E64164;
+}
+
+.action:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 220px 500px;
+  border-color: transparent transparent #38AD68 transparent;
+}
+
+.action__bg {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-right.png');
+  background-size: cover;
 }
 
 .action__item {
@@ -198,6 +506,7 @@ img {
   border-radius: 20px;
   background: #E64063 url(../img/bg-block.png) center bottom no-repeat;
   background-size: 100%;
+  box-shadow: 0 0.15em 0.3em rgba(0,0,0,0.3);
 }
 
 .action__container {
@@ -205,7 +514,49 @@ img {
 }
 
 .price {
+  position: relative;
   background: #56256F;
+}
+
+.price__inner {
+  padding-top: 4em;
+  position: relative;
+  z-index: 50;
+}
+
+.price:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 220px 0 0 500px;
+  border-color: transparent transparent transparent #479981;
+}
+
+.price:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 300px 112px 0;
+  border-color: transparent #FAD32A transparent transparent;
+}
+
+.price__bg {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50%;
+  background: url('../img/bg-right.png');
+  background-size: cover;
 }
 
 .price__item {
@@ -215,6 +566,7 @@ img {
   border-radius: 20px;
   background: #FAD32A;
   color: #2D2D2F;
+  box-shadow: 0 0.15em 0.3em rgba(0,0,0,0.3);
 }
 
 .price__item--main {
@@ -254,6 +606,12 @@ img {
 
 .price__logo {
   margin-top: auto;
+}
+
+.footer {
+  background: url('../img/bg-bottom.png') repeat-x;
+  background-position: center bottom;
+  background-size: auto 70%;
 }
 
 .footer__btns {
