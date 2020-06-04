@@ -145,12 +145,16 @@ img {
 
 .page-header__nav-link {
   display: block;
-  margin-right: 16px;
+  margin-right: 24px;
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 700;
   color: #59256D;
+}
+
+.page__header-container {
+  max-width: 1600px;
 }
 
 .page-header__nav-link--alter {
@@ -189,6 +193,10 @@ img {
 .about .container {
   position: relative;
   z-index: 50;
+}
+
+.about__wrapper {
+  max-width: 1600px;
 }
 
 .about__right-bottom {
